@@ -1,9 +1,37 @@
 <html>
     <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body ng-app="jsCodingTest">
         <main ng-controller="GiveTheGovernmentABurrito">
-            Write your HTML here.
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#">
+                    <h4>Give The Government A Burrito</h4>
+                  </a>
+                </div>
+              </div>
+            </nav>
+            <div class="container">
+                <div class="row search-button">
+                    <button ng-click="getBurritos()" type="button" class="btn btn-default btn-lg col-xs-12 search-button">Search</button>
+                </div>
+
+                <div class="row results">
+                    <h1 ng-if="error" class="col-xs-12 error">
+                        Oppps, something went wrong...
+                    </h1>
+                    <h1 ng-if="noResults" class="col-xs-12 error">
+                        Sorry, no results for that search
+                    </h1>
+                    <div class="col-xs-4" ng-repeat="result in results">
+                        <img class="image" ng-src="{{result.images[0].medium}}" alt="">
+                    </div>
+                </div>
+
+            </div>
         </main>
 
         <script src="lib/angular.min.js"></script>

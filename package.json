@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "citypantry-js-lib": "^1.0.46"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5"
   }
 }
