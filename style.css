@@ -1,8 +1,7 @@
 .image {
     display: block;
-        width: 100% !important;
-        height: auto !important;
-
+    width: 100% !important;
+    height: auto !important;
     margin-bottom: 10px;
 }
 
