@@ -63,7 +63,7 @@ describe('MyController', function() {
                     });
             });
 
-            it('results.length should be greater than 0', function() {
+            it('results.length should be 0', function() {
                 $httpBackend.expectGET(apiUrl);
                 var controller = createController();
                 $rootScope.getBurritos();
